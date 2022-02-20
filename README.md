@@ -29,14 +29,19 @@ printf("Hello World") --> std::cout << "Hello World";
 2.54cm = 1 inch
 
 ```c
-#include <stdio.h>
-void main(void) 
+#include <iostream>
+void main() 
 {
     float cm, inches;
-    printf("Enter a length in cm : ");
-    scanf("%f",&cm);
+  
+    std::cout<<"Enter a length in cm : ";
+    std::cin>>cm;
+  
     inches = cm / 2.54;
-    printf("Length in inches is %f \n", inches);
+  
+    std::cout<<"Length in inches is %f "<< inches << endl;
+
+  return 0;
 }   
 ```
 
@@ -60,17 +65,22 @@ OtRate = 1700
 Please Note that the input command in C++ is std::cin. This is a representation of the Keyboard.
 
 ```c
-#include <stdio.h>
-void main(void)
+#include <iostream>
+using namespace std;
+
+void main()
 {
    double salary, netSalary;
    int etype, otHrs, otRate;
-   printf("Enter Employee Type : ");
-   scanf("%d", &etype);
-   printf("Enter Salary  : ");
-   scanf("%f", &salary);
-   printf("Enter OtHrs : ");
-   scanf("%d", &otHrs); 
+  
+   cout<<"Enter Employee Type : ";
+   cin>>etype;
+  
+   cout<<"Enter Salary  : ";
+   cin>>salary;
+  
+   cout<<Enter OtHrs : ";
+   cin>>otHrs; 
    
    switch (etype) {
       case 1 :
@@ -86,7 +96,10 @@ void main(void)
 
 
    netSalary = salary + otHrs* otRate;
-   printf("Net Salary is %f ", netSalary);
+  
+   cout<<"Net Salary is %f "<<netSalary
+
+     return 0;
 }
 ```
 
@@ -98,21 +111,26 @@ Convert the C program given below which calculates the Factorial of a number tha
 Please Note that the input command in C++ is ```std::cin```. This is a representation of the Keyboard.
 
 ```c
-#include <stdio.h>
-void main(void)
+#include <iostream>
+using namespace std;
+
+void main()
 {
     int no;
     long fac;
 
-    printf("Enter a Number : ");
-    scanf("%d", &no);
+    cout<<"Enter a Number :" ;
+    cin>>no;
 
     fac = 1;
+  
     for (int r=no; r >= 1; r--) {
         fac = fac * r;
     }
 
-    printf("Factorial of %d is %ld\n", no, fac);    
+    cout<<"Factorial of" << no << "is" << fac <<"."<< endl;
+
+  return 0;
 }
 ```
  
@@ -147,6 +165,41 @@ int main() {
   std::cout << "nCr = ";
   std::cout << nCr(n,r);
   std::cout << std::endl;
+
+  return 0;
+  
 }
+
+long Factorial(int no)
+{
+  int last,i;
+
+
+  for(i=0;i<no;i++)
+    {
+      last=last*no;
+
+      no=no-1;
+    }
+
+  return last;
+}
+
+long nCr(int n , int r)
+long Factorial(int no);
+{
+  int x,y,z,NCR;
+
+  x=Factorial(n);
+  y=Factorial(r);
+  z=Factorial(n-r);
+
+  NCR=x(float)/(y*z);
+
+  return NCR;
+
+}
+
+
 ```
 
